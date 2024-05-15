@@ -21,7 +21,7 @@
  * limitations under the License.
  */
 
-#include <zxing/Reader.h>
+#include <zxing/QZXingReader.h>
 #include <zxing/pdf417/decoder/Decoder.h>
 #include <zxing/DecodeHints.h>
 
@@ -29,7 +29,7 @@ namespace zxing {
 namespace pdf417 {
 
 
-class PDF417Reader : public Reader {
+class PDF417Reader : public QZXingReader {
  private:
   decoder::Decoder decoder;
 			

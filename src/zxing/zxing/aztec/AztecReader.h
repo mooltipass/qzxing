@@ -19,7 +19,7 @@
  * limitations under the License.
  */
 
-#include <zxing/Reader.h>
+#include <zxing/QZXingReader.h>
 #include <zxing/aztec/decoder/Decoder.h>
 #include <zxing/DecodeHints.h>
 
@@ -29,7 +29,7 @@
 namespace zxing {
 namespace aztec {
         
-class AztecReader : public Reader {
+class AztecReader : public QZXingReader {
  private:
   Decoder decoder_;
             

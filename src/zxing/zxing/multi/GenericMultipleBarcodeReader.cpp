@@ -25,11 +25,11 @@ using zxing::Result;
 using zxing::multi::GenericMultipleBarcodeReader;
 
 // VC++
-using zxing::Reader;
+using zxing::QZXingReader;
 using zxing::BinaryBitmap;
 using zxing::DecodeHints;
 
-GenericMultipleBarcodeReader::GenericMultipleBarcodeReader(Reader& delegate)
+GenericMultipleBarcodeReader::GenericMultipleBarcodeReader(QZXingReader& delegate)
     : delegate_(delegate) {}
 
 GenericMultipleBarcodeReader::~GenericMultipleBarcodeReader(){}

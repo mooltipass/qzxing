@@ -20,7 +20,7 @@
 namespace zxing {
 namespace multi {
 
-ByQuadrantReader::ByQuadrantReader(Reader& delegate) : delegate_(delegate) {}
+ByQuadrantReader::ByQuadrantReader(QZXingReader& delegate) : delegate_(delegate) {}
 
 ByQuadrantReader::~ByQuadrantReader(){}
 

@@ -21,14 +21,14 @@
  * limitations under the License.
  */
 
-#include <zxing/Reader.h>
+#include <zxing/QZXingReader.h>
 #include <zxing/DecodeHints.h>
 #include <zxing/datamatrix/decoder/Decoder.h>
 
 namespace zxing {
 namespace datamatrix {
 
-class DataMatrixReader : public Reader {
+class DataMatrixReader : public QZXingReader {
 private:
   Decoder decoder_;
 

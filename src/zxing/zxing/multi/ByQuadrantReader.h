@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-#include <zxing/Reader.h>
+#include <zxing/QZXingReader.h>
 #include <zxing/BinaryBitmap.h>
 #include <zxing/Result.h>
 #include <zxing/DecodeHints.h>
@@ -25,12 +25,12 @@
 namespace zxing {
 namespace multi {
 
-class ByQuadrantReader : public Reader {
+class ByQuadrantReader : public QZXingReader {
   private:
-    Reader& delegate_;
+    QZXingReader& delegate_;
 
   public:
-    ByQuadrantReader(Reader& delegate);
+    ByQuadrantReader(QZXingReader& delegate);
     virtual ~ByQuadrantReader();
     virtual QSharedPointer<Result> decode(QSharedPointer<BinaryBitmap> image);
     virtual QSharedPointer<Result> decode(QSharedPointer<BinaryBitmap> image, DecodeHints hints);

@@ -21,17 +21,17 @@
  */
 
  
-#include <zxing/Reader.h>
+#include <zxing/QZXingReader.h>
 #include <zxing/common/BitArray.h>
 #include <zxing/Result.h>
 #include <zxing/DecodeHints.h>
 
 namespace zxing {
-  class MultiFormatReader : public Reader {
+  class MultiFormatReader : public QZXingReader {
   private:
     QSharedPointer<Result> decodeInternal(QSharedPointer<BinaryBitmap> image);
   
-    std::vector<QSharedPointer<Reader> > readers_;
+    std::vector<QSharedPointer<QZXingReader> > readers_;
     DecodeHints hints_;
 
   public:

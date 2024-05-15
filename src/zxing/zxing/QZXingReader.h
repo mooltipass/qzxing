@@ -1,9 +1,11 @@
+#ifndef ZXING_READER_H
+#define ZXING_READER_H
+
 /*
- *  Reader.cpp
+ *  Reader.h
  *  zxing
  *
- *  Created by Christian Brunschen on 13/05/2008.
- *  Copyright 2008 ZXing authors All rights reserved.
+ *  Copyright 2010 ZXing authors All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,14 +20,21 @@
  * limitations under the License.
  */
 
-#include <zxing/Reader.h>
+#include <zxing/BinaryBitmap.h>
+#include <zxing/Result.h>
+#include <zxing/DecodeHints.h>
 
 namespace zxing {
 
-Reader::~Reader() { }
+ class QZXingReader  {
+  protected:
+   QZXingReader() {}
+  public:
+   virtual QSharedPointer<Result> decode(QSharedPointer<BinaryBitmap> image);
+   virtual QSharedPointer<Result> decode(QSharedPointer<BinaryBitmap> image, DecodeHints hints) = 0;
+   virtual ~QZXingReader();
+};
 
-QSharedPointer<Result> Reader::decode(QSharedPointer<BinaryBitmap> image) {
-  return decode(image, DecodeHints::DEFAULT_HINT);
 }
 
-}
+#endif // ZXING_READER_H

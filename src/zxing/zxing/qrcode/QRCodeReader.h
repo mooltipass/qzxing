@@ -21,14 +21,14 @@
  * limitations under the License.
  */
 
-#include <zxing/Reader.h>
+#include <zxing/QZXingReader.h>
 #include <zxing/qrcode/decoder/Decoder.h>
 #include <zxing/DecodeHints.h>
 
 namespace zxing {
 namespace qrcode {
 		
-class QRCodeReader : public Reader {
+class QRCodeReader : public QZXingReader {
  private:
   Decoder decoder_;
 			

@@ -27,6 +27,7 @@ HEADERS += $$PWD/QZXing_global.h \
     $$PWD/CameraImageWrapper.h \
     $$PWD/ImageHandler.h \
     $$PWD/QZXing.h \
+    $$PWD/zxing/zxing/QZXingReader.h \
     $$PWD/zxing/zxing/ZXing.h \
     $$PWD/zxing/zxing/IllegalStateException.h \
     $$PWD/zxing/zxing/InvertedLuminanceSource.h \
@@ -36,7 +37,6 @@ HEADERS += $$PWD/QZXing_global.h \
     $$PWD/zxing/zxing/Result.h \
     $$PWD/zxing/zxing/ResultMetadata.h \
     $$PWD/zxing/zxing/ReaderException.h \
-    $$PWD/zxing/zxing/Reader.h \
     $$PWD/zxing/zxing/NotFoundException.h \
     $$PWD/zxing/zxing/MultiFormatReader.h \
     $$PWD/zxing/zxing/LuminanceSource.h \
@@ -87,6 +87,7 @@ HEADERS += $$PWD/QZXing_global.h \
 SOURCES += $$PWD/CameraImageWrapper.cpp \
     $$PWD/QZXing.cpp \
     $$PWD/ImageHandler.cpp \
+    $$PWD/zxing/zxing/QZXingReader.cpp \
     $$PWD/zxing/zxing/ResultIO.cpp \
     $$PWD/zxing/zxing/InvertedLuminanceSource.cpp \
     $$PWD/zxing/zxing/ChecksumException.cpp \
@@ -94,7 +95,6 @@ SOURCES += $$PWD/CameraImageWrapper.cpp \
     $$PWD/zxing/zxing/ResultPoint.cpp \
     $$PWD/zxing/zxing/Result.cpp \
     $$PWD/zxing/zxing/ResultMetadata.cpp \
-    $$PWD/zxing/zxing/Reader.cpp \
     $$PWD/zxing/zxing/MultiFormatReader.cpp \
     $$PWD/zxing/zxing/LuminanceSource.cpp \
     $$PWD/zxing/zxing/FormatException.cpp \

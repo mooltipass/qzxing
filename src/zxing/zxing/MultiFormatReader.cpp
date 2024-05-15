@@ -102,35 +102,35 @@ void MultiFormatReader::enableReaders(zxing::DecodeHints hints, bool allowAll)
 #ifdef ENABLE_DECODER_1D_BARCODES
   if ((allowAll || addOneDReader) && !tryHarder)
   {
-    readers_.push_back(QSharedPointer<Reader>(new zxing::oned::MultiFormatOneDReader(hints)));
+    readers_.push_back(QSharedPointer<QZXingReader>(new zxing::oned::MultiFormatOneDReader(hints)));
   }
 #endif
 
 #ifdef ENABLE_DECODER_QR_CODE
   if (allowAll || hints.containsFormat(BarcodeFormat::QR_CODE))
   {
-    readers_.push_back(QSharedPointer<Reader>(new zxing::qrcode::QRCodeReader()));
+    readers_.push_back(QSharedPointer<QZXingReader>(new zxing::qrcode::QRCodeReader()));
   }
 #endif
 
 #ifdef ENABLE_DECODER_DATA_MATRIX
   if (allowAll || hints.containsFormat(BarcodeFormat::DATA_MATRIX))
   {
-    readers_.push_back(QSharedPointer<Reader>(new zxing::datamatrix::DataMatrixReader()));
+    readers_.push_back(QSharedPointer<QZXingReader>(new zxing::datamatrix::DataMatrixReader()));
   }
 #endif
 
 #ifdef ENABLE_DECODER_AZTEC
   if (allowAll || hints.containsFormat(BarcodeFormat::AZTEC))
   {
-    readers_.push_back(QSharedPointer<Reader>(new zxing::aztec::AztecReader()));
+    readers_.push_back(QSharedPointer<QZXingReader>(new zxing::aztec::AztecReader()));
   }
 #endif
 
 #ifdef ENABLE_DECODER_PDF17
   if (allowAll || hints.containsFormat(BarcodeFormat::PDF_417))
   {
-    readers_.push_back(QSharedPointer<Reader>(new zxing::pdf417::PDF417Reader()));
+    readers_.push_back(QSharedPointer<QZXingReader>(new zxing::pdf417::PDF417Reader()));
   }
 #endif
   /*
@@ -141,7 +141,7 @@ void MultiFormatReader::enableReaders(zxing::DecodeHints hints, bool allowAll)
 #ifdef ENABLE_DECODER_1D_BARCODES
   if ((allowAll || addOneDReader) && tryHarder)
   {
-    readers_.push_back(QSharedPointer<Reader>(new zxing::oned::MultiFormatOneDReader(hints)));
+    readers_.push_back(QSharedPointer<QZXingReader>(new zxing::oned::MultiFormatOneDReader(hints)));
   }
 #endif
 }

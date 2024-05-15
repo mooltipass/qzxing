@@ -21,13 +21,13 @@
  * limitations under the License.
  */
 
-#include <zxing/Reader.h>
+#include <zxing/QZXingReader.h>
 #include <zxing/DecodeHints.h>
 
 namespace zxing {
 namespace oned {
 
-class OneDReader : public Reader {
+class OneDReader : public QZXingReader {
 private:
   QSharedPointer<Result> doDecode(QSharedPointer<BinaryBitmap> image, DecodeHints hints);
 

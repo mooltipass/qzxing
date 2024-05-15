@@ -19,7 +19,7 @@
  */
 
 #include <zxing/multi/MultipleBarcodeReader.h>
-#include <zxing/Reader.h>
+#include <zxing/QZXingReader.h>
 
 namespace zxing {
 namespace multi {
@@ -35,12 +35,12 @@ class GenericMultipleBarcodeReader : public MultipleBarcodeReader {
                         int xOffset, 
                         int yOffset,
                         int currentDepth);
-  Reader& delegate_;
+  QZXingReader& delegate_;
   static const int MIN_DIMENSION_TO_RECUR = 100;
   static const int MAX_DEPTH = 4;
 
  public:
-  GenericMultipleBarcodeReader(Reader& delegate);
+  GenericMultipleBarcodeReader(QZXingReader& delegate);
   virtual ~GenericMultipleBarcodeReader();
   virtual std::vector<QSharedPointer<Result> > decodeMultiple(QSharedPointer<BinaryBitmap> image, DecodeHints hints);
 };
